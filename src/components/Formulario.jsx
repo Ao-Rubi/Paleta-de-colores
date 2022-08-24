@@ -25,7 +25,7 @@ const Formulario = () => {
         <div>
             <Form onSubmit={handleSubmit}>
                 <Form.Group>
-                    <Card>
+                    <Card className='mb-3'>
                         <Card.Header>Administrar Color</Card.Header>
                         <Card.Body className='d-flex'>
                             <Form.Control className='me-3' type="color" defaultValue={"#000000"} onChange={(e)=>{setColor(e.target.value)}}></Form.Control>
@@ -33,7 +33,7 @@ const Formulario = () => {
                             <Form.Control type='text' placeholder='ingrese nombre' onChange={(e)=>{setNombre(e.target.value)}}></Form.Control>
     
                         </Card.Body>
-                        <Card.Footer>
+                        <Card.Footer className='d-flex justify-content-end '>
                             <Button variant="primary" type='submit'>Enviar</Button>
                         </Card.Footer>
                     </Card>

@@ -1,16 +1,18 @@
 import React from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import ItemColor from './ItemColor';
 
 const ListaColores = (props) => {
     return (
-        <div>
-            <ListGroup>
+        <Container>
+            <Row>
                 {
-                    props.arregloColores.map((item, position)=>{return <ItemColor key={position} colorCargado={item}></ItemColor> })
+                    props.arregloColores.map((item, position)=>{return <Col className='mb-2' xs={6} md={3} lg={2}> <ItemColor key={position} colorCargado={item}></ItemColor> </Col> })
                 }
-            </ListGroup>
-        </div>
+            </Row>
+        </Container>
     );
 };
 
