@@ -2,11 +2,10 @@ import React from 'react';
 
 const CajaColor = (props) => {
 
-    let color = props.color
-    console.log(color);
+    let color = props.color;
 
     return (
-        <div style={{backgroundColor:color, width:"100px", height:"100px"}}></div>
+        <div className='m-0' style={{backgroundColor:color, width:"120px", height:"100px"}}></div>
     );
 };
 

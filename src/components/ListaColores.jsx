@@ -9,11 +9,13 @@ const ListaColores = (props) => {
         <Container>
             <Row>
                 {
-                    props.arregloColores.map((item, position)=>{return <Col className='mb-2' xs={6} md={3} lg={2}> <ItemColor key={position} colorCargado={item}></ItemColor> </Col> })
+                    props.arregloColores.map((item, index)=>{
+                        return <Col key={index} className='mb-2' xs={6} md={3} lg={2}> <ItemColor colorCargado={item} ></ItemColor> </Col> 
+                    })
                 }
             </Row>
         </Container>
     );
 };
-
+// borrarColor={props.borrarColor}
 export default ListaColores;
